@@ -1,0 +1,72 @@
+:root {
+  --clr-primary: #0B0D17;
+  --clr-accent: #D0D6F9;
+  --clr-white: #fff;
+  --ff-main: "Bellefair", sans-serif;
+  --ff-secondary: "Barlow", sans-serif;
+  --ff-secondary-tight: "Barlow Condensed", sans-serif
+  --fw-thin: 400;
+  --fw-normal: 700;
+  --fw-bold: 800;
+  --fs-1: 9rem;
+  --fs-2: 6.25rem;
+  --fs-3: 3.5rem;
+  --fs-4: 2rem;
+  --fs-5: 1.75rem;
+  --fs-6: 1.125rem;
+  --fs-7: 1rem;
+  --fs-8: 0.875rem;
+  --sp-1: 0.125rem;
+  --sp-2: 0.25rem;
+  --sp-3: 0.5rem;
+  --sp-4: 0.75rem;
+  --sp-5: 1rem;
+  --sp-6: 1.5rem;
+  --sp-7: 2rem;
+  --sp-8: 2.5rem;
+  --sp-9: 3rem;
+  --sp-10: 4rem;
+  --sp-11: 5rem;
+  --sp-12: 6rem;
+  --sp-13: 8rem;
+  --ls-0: 0;
+  --ls-1: 2px;
+  --ls-2: 4px;
+  --lh-1: 1;
+  --lh-2: 1.8;
+  --desktop-container-width: 37.5rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--ff-main), sans-serif;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=styles.css.map */

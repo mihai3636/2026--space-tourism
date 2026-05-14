@@ -1,0 +1,65 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.tp-1 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-1);
+    line-height: normal;
+    letter-spacing: var(--ls-0);
+}
+
+.tp-2 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-2);
+    line-height: normal;
+    letter-spacing: var(--ls-0);
+}
+
+.tp-3 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-3);
+    line-height: normal;
+    letter-spacing: var(--ls-0);
+}
+
+.tp-4 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-4);
+    line-height: normal;
+    letter-spacing: var(--ls-0);
+}
+
+.tp-5 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-4);
+    line-height: normal;
+    letter-spacing: var(--ls-2);
+}
+
+.tp-6 {
+    font-family: var(--ff-main);
+    font-size: var(--fs-5);
+    line-height: normal;
+    letter-spacing: var(--ls-0);
+}
+
+.tp-7 {
+    font-family: var(--ff-secondary-tight);
+    font-size: var(--fs-8);
+    line-height: normal;
+    letter-spacing: var(--ls-1);
+}
+
+.tp-8 {
+    font-family: var(--ff-secondary-tight);
+    font-size: var(--fs-7);
+    line-height: normal;
+    letter-spacing: var(--ls-1);
+}
+
+.tp-8 {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-6);
+    line-height: var(--lh-2);
+    letter-spacing: var(--ls-0);
+}
