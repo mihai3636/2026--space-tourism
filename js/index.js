@@ -6,6 +6,8 @@ const navListEl = document.getElementById("navList");
 
 console.log(btnMenuEl);
 
+setupTabTrapping();
+
 btnMenuEl.addEventListener("click", () => {
   const currentState = navEl.dataset.open == "true";
   if (currentState) {
@@ -21,7 +23,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-setupTabTrapping();
+navListEl.addEventListener("click", (e) => {
+  const targetEl = e.target;
+  if (targetEl.closest("li") == null) return;
+
+  closeMenu();
+});
+
+navListEl.addEventListener("keydown", (e) => {
+  if (e.key !== " ") return;
+  const targetEl = e.target;
+  if (targetEl.closest("li") == null) return;
+
+  closeMenu();
+});
 
 function closeMenu() {
   navEl.dataset.open = false;
