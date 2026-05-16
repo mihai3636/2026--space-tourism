@@ -8,6 +8,9 @@ $bp-desktop: #{toRem(1000px)};
   --clr-accent: #d0d6f9;
   --clr-white: #fff;
 
+  --clr-grey: rgb(151, 151, 151);
+  --clr-grey-transparent: rgb(151, 151, 151, 0.25);
+
   --ff-main: "Bellefair", sans-serif;
   --ff-secondary: "Barlow", sans-serif;
   --ff-secondary-tight: "Barlow Condensed", sans-serif;
