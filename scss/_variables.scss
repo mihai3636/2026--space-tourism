@@ -1,6 +1,6 @@
 @use "./utils" as *;
 
-$bp-tablet: #{toRem(600px)};
+$bp-tablet: #{toRem(768px)};
 $bp-desktop: #{toRem(1000px)};
 
 :root {
@@ -51,6 +51,8 @@ $bp-desktop: #{toRem(1000px)};
 
   // BOX SHADOWS
   --bs-inset-right: inset -3px 0px 0px #fff;
+
+  --bs-inset-bottom: inset 0px -3px 0px #fff;
 
   --desktop-container-width: #{toRem(1300px)};
 }

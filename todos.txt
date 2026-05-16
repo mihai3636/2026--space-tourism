@@ -1,0 +1,1 @@
+1. Remove the intert attribute from the navList el when reaching tablet width

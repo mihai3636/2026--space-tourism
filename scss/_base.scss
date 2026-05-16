@@ -13,10 +13,12 @@ body {
   background-image: url(../assets/home/background-home-mobile.jpg);
 
   @media (min-width: $bp-tablet) {
+    padding-top: 0;
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
 
   @media (min-width: $bp-desktop) {
+    padding-top: var(--sp-6);
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }

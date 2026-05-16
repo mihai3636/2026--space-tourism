@@ -34,6 +34,7 @@
   --lh-1: 1;
   --lh-2: 1.8;
   --bs-inset-right: inset -3px 0px 0px #fff;
+  --bs-inset-bottom: inset 0px -3px 0px #fff;
   --desktop-container-width: 81.25rem;
 }
 
@@ -80,13 +81,15 @@ body {
   background-size: cover;
   background-image: url(../assets/home/background-home-mobile.jpg);
 }
-@media (min-width: 37.5rem) {
+@media (min-width: 48rem) {
   body {
+    padding-top: 0;
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
 @media (min-width: 62.5rem) {
   body {
+    padding-top: var(--sp-6);
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
 }
@@ -200,13 +203,27 @@ main {
   letter-spacing: var(--ls-0);
 }
 
+@media (min-width: 48rem) {
+  .section--header {
+    padding-inline-end: 0;
+  }
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  .navigation {
+    justify-content: start;
+    gap: var(--sp-9);
+  }
 }
 
 .navigation__list {
-  backdrop-filter: blur(16px);
+  --blur: 1rem;
+  backdrop-filter: blur(var(--blur));
   position: fixed;
   top: 0;
   right: 0;
@@ -227,6 +244,20 @@ main {
   flex-direction: column;
   gap: var(--sp-7);
 }
+@media (min-width: 48rem) {
+  .navigation__list {
+    --blur: 2rem;
+    width: 100%;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: end;
+    gap: var(--sp-9);
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 0;
+    padding-inline: var(--sp-8);
+  }
+}
 
 [data-open=true] > .navigation__list {
   transform: translateX(0);
@@ -244,7 +275,7 @@ main {
   background: none;
   border: none;
 }
-@media (min-width: 37.5rem) {
+@media (min-width: 48rem) {
   .navigation__btn {
     display: none;
   }
@@ -265,12 +296,22 @@ main {
 .nav__item[data-selected] {
   box-shadow: var(--bs-inset-right);
 }
+@media (min-width: 48rem) {
+  .nav__item[data-selected] {
+    box-shadow: var(--bs-inset-bottom);
+  }
+}
 .nav__item a {
   display: flex;
   gap: var(--sp-5);
 }
 .nav__item a > span {
   font-weight: var(--fw-bold) !important;
+}
+@media (min-width: 48rem) {
+  .nav__item {
+    padding-block: var(--sp-8);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
