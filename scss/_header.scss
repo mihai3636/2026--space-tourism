@@ -1,0 +1,83 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+}
+
+.navigation__list {
+  backdrop-filter: blur(16px);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 40%;
+  bottom: 0;
+  transform: translateX(100%);
+
+  transition: transform 0.3s ease-in;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  padding-top: var(--sp-13);
+  padding-inline-start: var(--sp-7);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+  //   display: flex;
+  //   align-items: center;
+  //   gap: var(--sp-9);
+}
+
+[data-open="true"] > .navigation__list {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.navigation__btn {
+  position: relative;
+  z-index: 10;
+
+  background: none;
+  border: none;
+
+  @media (min-width: $bp-tablet) {
+    display: none;
+  }
+}
+
+.btn {
+  cursor: pointer;
+}
+
+[data-open="true"] .btn__img--hamburger {
+  display: none;
+}
+
+[data-open="false"] .btn__img--close {
+  display: none;
+}
+
+.nav__item {
+  &[data-selected] {
+    box-shadow: var(--bs-inset-right);
+  }
+
+  a {
+    display: flex;
+    gap: var(--sp-5);
+  }
+
+  a > span {
+    font-weight: var(--fw-bold) !important;
+  }
+}

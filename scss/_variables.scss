@@ -1,18 +1,19 @@
 @use "./utils" as *;
 
-:root {
-  --clr-primary: #0B0D17;
-  --clr-accent: #D0D6F9;
-  --clr-white: #fff;
+$bp-tablet: #{toRem(600px)};
+$bp-desktop: #{toRem(1000px)};
 
+:root {
+  --clr-primary: #0b0d17;
+  --clr-accent: #d0d6f9;
+  --clr-white: #fff;
 
   --ff-main: "Bellefair", sans-serif;
   --ff-secondary: "Barlow", sans-serif;
-  --ff-secondary-tight: "Barlow Condensed", sans-serif
+  --ff-secondary-tight: "Barlow Condensed", sans-serif;
 
-  --fw-thin: 400;
-  --fw-normal: 700;
-  --fw-bold: 800;
+  --fw-regular: 400;
+  --fw-bold: 700;
 
   // FONT SIZE
   --fs-1: #{toRem(144px)};
@@ -48,6 +49,8 @@
   --lh-1: 1;
   --lh-2: 1.8;
 
+  // BOX SHADOWS
+  --bs-inset-right: inset -3px 0px 0px #fff;
 
-  --desktop-container-width: #{toRem(600px)};
+  --desktop-container-width: #{toRem(1300px)};
 }
