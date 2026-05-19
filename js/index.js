@@ -4,8 +4,13 @@ const btnMenuEl = document.getElementById("btnMenu");
 const navEl = document.getElementById("nav");
 const navListEl = document.getElementById("navList");
 
+const mobileNav = window.matchMedia("(max-width: 47.9375rem)");
+
 console.log(btnMenuEl);
 
+mobileNav.addEventListener("change", syncNavState);
+
+syncNavState();
 setupTabTrapping();
 
 btnMenuEl.addEventListener("click", () => {
@@ -38,7 +43,13 @@ navListEl.addEventListener("keydown", (e) => {
   closeMenu();
 });
 
+function isMobile() {
+  return mobileNav.matches;
+}
+
 function closeMenu() {
+  if (!isMobile()) return;
+
   navEl.dataset.open = false;
   btnMenuEl.ariaExpanded = false;
   navListEl.ariaHidden = true;
@@ -48,6 +59,8 @@ function closeMenu() {
 }
 
 function openMenu() {
+  if (!isMobile()) return;
+
   navEl.dataset.open = true;
   btnMenuEl.ariaExpanded = true;
   navListEl.ariaHidden = false;
@@ -65,6 +78,7 @@ function setupTabTrapping() {
   const firstLink = links.at(0);
 
   document.addEventListener("keydown", (e) => {
+    if (!isMobile()) return;
     if (e.key != "Tab" || navEl.dataset.open === "false") return;
 
     if (e.shiftKey && document.activeElement === firstLink) {
@@ -76,6 +90,7 @@ function setupTabTrapping() {
     if (document.activeElement === firstEl) {
       e.preventDefault();
       firstLink.focus();
+      return;
     }
 
     if (document.activeElement === lastEl) {
@@ -83,4 +98,14 @@ function setupTabTrapping() {
       firstEl.focus();
     }
   });
+}
+
+function syncNavState() {
+  if (isMobile()) {
+    closeMenu();
+  } else {
+    navListEl.removeAttribute("inert");
+    navListEl.setAttribute("aria-hidden", "false");
+    document.body.classList.remove("overflow-hidden");
+  }
 }
