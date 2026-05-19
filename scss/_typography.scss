@@ -36,7 +36,7 @@
 }
 
 .tp-5 {
-  font-family: var(--ff-main);
+  font-family: var(--ff-secondary-tight);
   font-size: var(--fs-4);
   font-weight: var(--fw-regular);
   line-height: normal;
@@ -44,11 +44,18 @@
 }
 
 .tp-6 {
-  font-family: var(--ff-main);
-  font-size: var(--fs-5);
+  font-family: var(--ff-secondary-tight);
+  font-size: var(--fs-6);
   font-weight: var(--fw-regular);
   line-height: normal;
-  letter-spacing: var(--ls-0);
+  letter-spacing: var(--ls-2);
+
+  @media (min-width: $bp-tablet) {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-regular);
+    line-height: normal;
+    letter-spacing: var(--ls-2);
+  }
 }
 
 .tp-7 {
@@ -69,7 +76,7 @@
 
 .tp-9 {
   font-family: var(--ff-secondary);
-  font-size: var(--fs-6);
+  font-size: var(--fs-9);
   font-weight: var(--fw-regular);
   line-height: var(--lh-2);
   letter-spacing: var(--ls-0);

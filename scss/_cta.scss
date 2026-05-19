@@ -1,0 +1,63 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.section--cta {
+  padding-block-start: var(--sp-9);
+  @media (min-width: $bp-tablet) {
+    padding-block-start: var(--sp-13);
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding-block-start: 300px;
+  }
+}
+
+.cta {
+  max-width: #{toRem(512px)};
+
+  display: grid;
+  row-gap: var(--sp-12);
+  @media (min-width: $bp-tablet) {
+    row-gap: var(--sp-10);
+  }
+
+  @media (min-width: $bp-desktop) {
+    max-width: var(--desktop-container-width);
+
+    grid-template-columns: 1fr 1fr;
+    padding-inline-start: var(--sp-12);
+  }
+}
+
+.cta__info {
+  --flow-spacer: var(--sp-6);
+  text-align: center;
+
+  @media (min-width: $bp-desktop) {
+    text-align: start;
+  }
+}
+
+.cta__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta__header {
+}
+
+.cta__subheader {
+}
+
+.cta__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--cta-btn-size);
+  aspect-ratio: 1;
+
+  border-radius: var(--br-circle);
+  cursor: pointer;
+}

@@ -19,14 +19,37 @@ $bp-desktop: #{toRem(1000px)};
   --fw-bold: 700;
 
   // FONT SIZE
-  --fs-1: #{toRem(144px)};
-  --fs-2: #{toRem(100px)};
-  --fs-3: #{toRem(56px)};
-  --fs-4: #{toRem(32px)};
+  --fs-1: #{toRem(80px)};
+  --fs-2: #{toRem(56px)};
+  --fs-3: #{toRem(24px)};
+  --fs-4: #{toRem(18px)};
   --fs-5: #{toRem(28px)};
-  --fs-6: #{toRem(18px)};
+  --fs-6: #{toRem(16px)};
   --fs-7: #{toRem(16px)};
   --fs-8: #{toRem(14px)};
+  --fs-9: #{toRem(15px)};
+
+  @media (min-width: $bp-tablet) {
+    --fs-1: #{toRem(144px)};
+
+    --fs-2: #{toRem(80px)};
+    --fs-3: #{toRem(40px)};
+    --fs-4: #{toRem(24px)};
+    --fs-5: #{toRem(20px)};
+    --fs-9: #{toRem(16px)};
+  }
+
+  @media (min-width: $bp-desktop) {
+    --fs-1: #{toRem(144px)};
+    --fs-2: #{toRem(96px)};
+    --fs-3: #{toRem(56px)};
+    --fs-4: #{toRem(32px)};
+    --fs-5: #{toRem(28px)};
+    --fs-6: #{toRem(28px)};
+    --fs-7: #{toRem(14px)};
+    --fs-8: #{toRem(16px)};
+    --fs-9: #{toRem(18px)};
+  }
 
   // SPACING
   --sp-1: #{toRem(2px)};
@@ -58,4 +81,13 @@ $bp-desktop: #{toRem(1000px)};
   --bs-inset-bottom: inset 0px -3px 0px #fff;
 
   --desktop-container-width: #{toRem(1300px)};
+
+  // BORDER RADIUS
+  --br-circle: 50%;
+
+  // CTA BTN SIZE
+  --cta-btn-size: #{toRem(144px)};
+  @media (min-width: $bp-tablet) {
+    --cta-btn-size: #{toRem(272px)};
+  }
 }

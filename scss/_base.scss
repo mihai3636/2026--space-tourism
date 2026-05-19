@@ -7,6 +7,7 @@ body {
   font-weight: var(--fw-normal);
   line-height: 1.5;
 
+  min-height: 100vh;
   padding-top: var(--sp-6);
 
   background-size: cover;
@@ -28,7 +29,7 @@ body {
 }
 
 main {
-  height: 400px;
+  // height: 400px;
 }
 
 .section {
@@ -54,6 +55,18 @@ main {
 
 .fg-white {
   color: var(--clr-white);
+}
+
+.fg-accent {
+  color: var(--clr-accent);
+}
+
+.fg-primary {
+  color: var(--clr-primary);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
 }
 
 .uppercase {
