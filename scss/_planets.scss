@@ -1,0 +1,13 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.planets {
+  gap: 10px;
+}
+
+.planets__item {
+  padding-block-end: var(--sp-5);
+}
+
+// TODO find a way to extract that list logic to a utility class that works for
+// both nav header and planets tabs

@@ -31,20 +31,20 @@
           <div class="navigation__decor"></div>
           <ul
             id="navList"
-            class="navigation__list uppercase"
+            class="navigation__list list list--col-mobile uppercase"
             aria-hidden="true"
             inert
           >
-            <li class="nav__item">
+            <li class="nav__item underline-indicator">
               <a href="/index.html"><span aria-hidden="true">00</span> Home</a>
             </li>
-            <li class="nav__item" data-selected>
+            <li class="nav__item underline-indicator" data-selected>
               <a href="#"><span aria-hidden="true">01</span> Destination</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item underline-indicator">
               <a href="/crew.html"><span aria-hidden="true">02</span> Crew</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item underline-indicator">
               <a href="/technology.html"
                 ><span aria-hidden="true">03</span> Technology</a
               >
@@ -72,24 +72,39 @@
       </div>
     </header>
     <main class="content">
-      <section class="section section--cta">
-        <div class="container cta">
-          <div class="cta__info fg-accent flow-content">
-            <h2 class="cta__subheader uppercase tp-6">
-              So, you want to travel to
-            </h2>
-            <h1 class="cta__header fg-white uppercase tp-1">Space</h1>
-            <p class="tp-9">
-              Let’s face it; if you want to go to space, you might as well
-              genuinely go to outer space and not hover kind of on the edge of
-              it. Well sit back, and relax because we’ll give you a truly out of
-              this world experience!
-            </p>
-          </div>
-          <div class="cta__action">
-            <a href="#" class="cta__btn tp-4 fg-primary bg-white uppercase"
-              >Explore</a
-            >
+      <section class="section section--destination">
+        <div class="container">
+          <h1 class="title tp-6 fg-white">
+            <span>01</span> Pick your destination
+          </h1>
+          <div class="destination">
+            <div class="destination__img">
+              <img
+                class="img-planet"
+                src="./assets/destination/image-moon.webp"
+                alt="Moon"
+              />
+            </div>
+            <div class="destination__info">
+              <ul
+                id="planetsList"
+                class="planets list uppercase fg-white tp-8"
+                aria-hidden="true"
+              >
+                <li class="planets__item underline-indicator">
+                  <a href="#">Moon</a>
+                </li>
+                <li class="planets__item underline-indicator" data-selected>
+                  <a href="#">Mars</a>
+                </li>
+                <li class="planets__item underline-indicator">
+                  <a href="#">Europa</a>
+                </li>
+                <li class="planets__item underline-indicator">
+                  <a href="#">Technology</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

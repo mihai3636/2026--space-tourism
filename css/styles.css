@@ -195,6 +195,27 @@ body {
   text-transform: uppercase;
 }
 
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.list--col-mobile {
+  flex-direction: column;
+}
+@media (min-width: 48rem) {
+  .list--col-mobile {
+    flex-direction: row;
+  }
+}
+
+.underline-indicator {
+  --_underline-shadow: var(--underline-shadow, var(--bs-inset-bottom));
+}
+.underline-indicator[data-selected] {
+  box-shadow: var(--_underline-shadow);
+}
+
 .tp-1 {
   font-family: var(--ff-main);
   font-size: var(--fs-1);
@@ -333,8 +354,6 @@ body {
 .navigation__list {
   padding-top: var(--sp-13);
   padding-inline-start: var(--sp-7);
-  display: flex;
-  flex-direction: column;
   gap: var(--sp-7);
 }
 @media (min-width: 48rem) {
@@ -343,7 +362,6 @@ body {
     width: 100%;
     position: static;
     transform: none;
-    flex-direction: row;
     justify-content: end;
     gap: var(--sp-9);
     background-color: rgba(255, 255, 255, 0.03);
@@ -392,13 +410,8 @@ body {
   display: none;
 }
 
-.nav__item[data-selected] {
-  box-shadow: var(--bs-inset-right);
-}
-@media (min-width: 48rem) {
-  .nav__item[data-selected] {
-    box-shadow: var(--bs-inset-bottom);
-  }
+.nav__item {
+  --underline-shadow: var(--bs-inset-right);
 }
 .nav__item a {
   display: flex;
@@ -410,6 +423,7 @@ body {
 @media (min-width: 48rem) {
   .nav__item {
     padding-block: var(--sp-8);
+    --underline-shadow: var(--bs-inset-bottom);
   }
 }
 
@@ -469,6 +483,14 @@ body {
   aspect-ratio: 1;
   border-radius: var(--br-circle);
   cursor: pointer;
+}
+
+.planets {
+  gap: 10px;
+}
+
+.planets__item {
+  padding-block-end: var(--sp-5);
 }
 
 /*# sourceMappingURL=styles.css.map */

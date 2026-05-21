@@ -1,0 +1,24 @@
+@use "utils" as *;
+@use "variables" as *;
+
+// TODO: how do I make this more reusable? For example in the header
+// I need it to turn to column direction on mobile but row on tablet+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.list--col-mobile {
+  flex-direction: column;
+
+  @media (min-width: $bp-tablet) {
+    flex-direction: row;
+  }
+}
+
+.underline-indicator {
+  --_underline-shadow: var(--underline-shadow, var(--bs-inset-bottom));
+  &[data-selected] {
+    box-shadow: var(--_underline-shadow);
+  }
+}
