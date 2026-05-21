@@ -63,6 +63,15 @@ main {
   margin-inline: auto;
 }
 
+.container--content {
+  --flow-spacer: var(--sp-9);
+
+  @media (min-width: $bp-desktop) {
+    // padding-inline: min(1vw, var(--sp-12));
+    padding-inline: var(--sp-12);
+  }
+}
+
 .flow-content > * + * {
   margin-top: var(--flow-spacer, var(--sp-3));
 }

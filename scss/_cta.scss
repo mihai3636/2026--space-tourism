@@ -13,7 +13,7 @@
 }
 
 .cta {
-  max-width: #{toRem(512px)};
+  max-width: var(--generic-container-max-width);
 
   display: grid;
   row-gap: var(--sp-12);

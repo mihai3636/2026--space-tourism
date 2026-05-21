@@ -37,14 +37,14 @@
 
 .tp-5 {
   font-family: var(--ff-secondary-tight);
-  font-size: var(--fs-4);
+  font-size: var(--fs-5);
   font-weight: var(--fw-regular);
   line-height: normal;
   letter-spacing: var(--ls-2);
 }
 
 .tp-6 {
-  font-family: var(--ff-secondary-tight);
+  font-family: var(--ff-main);
   font-size: var(--fs-6);
   font-weight: var(--fw-regular);
   line-height: normal;
@@ -55,6 +55,10 @@
     font-weight: var(--fw-regular);
     line-height: normal;
     letter-spacing: var(--ls-2);
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-family: var(--ff-main);
   }
 }
 

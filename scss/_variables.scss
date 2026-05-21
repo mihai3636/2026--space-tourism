@@ -1,6 +1,6 @@
 @use "./utils" as *;
 
-$bp-tablet: #{toRem(768px)};
+$bp-tablet: #{toRem(700px)};
 $bp-desktop: #{toRem(1000px)};
 
 :root {
@@ -23,8 +23,8 @@ $bp-desktop: #{toRem(1000px)};
   --fs-2: #{toRem(56px)};
   --fs-3: #{toRem(24px)};
   --fs-4: #{toRem(18px)};
-  --fs-5: #{toRem(28px)};
-  --fs-6: #{toRem(16px)};
+  --fs-5: #{toRem(18px)};
+  --fs-6: #{toRem(28px)};
   --fs-7: #{toRem(16px)};
   --fs-8: #{toRem(14px)};
   --fs-9: #{toRem(15px)};
@@ -90,4 +90,7 @@ $bp-desktop: #{toRem(1000px)};
   @media (min-width: $bp-tablet) {
     --cta-btn-size: #{toRem(272px)};
   }
+
+  // MISC CONTAINER? find a better name
+  --generic-container-max-width: #{toRem(512px)};
 }
