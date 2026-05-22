@@ -167,7 +167,7 @@ body {
 }
 
 .container--content {
-  --flow-spacer: var(--sp-9);
+  --flow-spacer: var(--sp-13);
 }
 @media (min-width: 62.5rem) {
   .container--content {
@@ -233,6 +233,52 @@ body {
   height: 1px;
   background-color: var(--clr-white);
   opacity: 0.25;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel > :nth-child(n+2) {
+  position: absolute;
+}
+
+.carousel__item {
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel__item {
+    transition: none;
+  }
+}
+.carousel__item {
+  /* By translating every negative index to minus 100% and positive indexes to plus 100% 
+     We avoid the rush effect when switching from most right element to most left element
+  */
+}
+.carousel__item[data-index="-3"] {
+  transform: translateX(-100%);
+}
+.carousel__item[data-index="-2"] {
+  transform: translateX(-100%);
+}
+.carousel__item[data-index="-1"] {
+  transform: translateX(-100%);
+}
+.carousel__item[data-index="0"] {
+  transform: translateX(0);
+  opacity: 1;
+}
+.carousel__item[data-index="1"] {
+  transform: translateX(100%);
+}
+.carousel__item[data-index="2"] {
+  transform: translateX(100%);
+}
+.carousel__item[data-index="3"] {
+  transform: translateX(100%);
 }
 
 .tp-1 {
@@ -579,10 +625,6 @@ body {
   align-items: center;
 }
 
-.destination__text {
-  --flow-spacer: var(--sp-5);
-}
-
 .img-planet {
   max-width: 50%;
   aspect-ratio: 1;
@@ -591,6 +633,10 @@ body {
   .img-planet {
     max-width: 100%;
   }
+}
+
+.destination__text {
+  --flow-spacer: var(--sp-5);
 }
 
 .destination__details {

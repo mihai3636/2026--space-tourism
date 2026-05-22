@@ -70,10 +70,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.destination__text {
-  --flow-spacer: var(--sp-5);
+  // overflow: hidden;
 }
 
 .img-planet {
@@ -83,6 +81,10 @@
   @media (min-width: $bp-desktop) {
     max-width: 100%;
   }
+}
+
+.destination__text {
+  --flow-spacer: var(--sp-5);
 }
 
 .destination__details {

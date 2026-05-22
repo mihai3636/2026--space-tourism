@@ -1,0 +1,54 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  & > :nth-child(n + 2) {
+    position: absolute;
+  }
+}
+
+.carousel__item {
+  opacity: 0;
+  z-index: -1;
+
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  /* By translating every negative index to minus 100% and positive indexes to plus 100% 
+    We avoid the rush effect when switching from most right element to most left element
+ */
+  &[data-index="-3"] {
+    // transform: translateX(-300%);
+    transform: translateX(-100%);
+  }
+  &[data-index="-2"] {
+    // transform: translateX(-200%);
+    transform: translateX(-100%);
+  }
+  &[data-index="-1"] {
+    transform: translateX(-100%);
+  }
+  &[data-index="0"] {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  &[data-index="1"] {
+    transform: translateX(100%);
+  }
+  &[data-index="2"] {
+    // transform: translateX(200%);
+    transform: translateX(100%);
+  }
+  &[data-index="3"] {
+    // transform: translateX(300%);
+    transform: translateX(100%);
+  }
+}

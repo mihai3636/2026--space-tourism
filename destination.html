@@ -78,29 +78,61 @@
             <span>01</span> Pick your destination
           </h1>
           <div class="destination">
-            <div class="destination__img">
+            <div class="destination__img carousel">
               <img
-                class="img-planet"
+                class="img-planet carousel__item"
+                data-index="0"
                 src="./assets/destination/image-moon.webp"
                 alt="Moon"
+              />
+              <img
+                class="img-planet carousel__item"
+                data-index="1"
+                src="./assets/destination/image-mars.webp"
+                alt="Mars"
+              />
+              <img
+                class="img-planet carousel__item"
+                data-index="2"
+                src="./assets/destination/image-europa.webp"
+                alt="Europa"
+              />
+              <img
+                class="img-planet carousel__item"
+                data-index="3"
+                src="./assets/destination/image-titan.webp"
+                alt="Titan"
               />
             </div>
             <div class="destination__info flow-content">
               <ul
                 id="planetsList"
-                class="planets list uppercase fg-accent tp-8"
+                class="planets list carousel__btns uppercase fg-accent tp-8"
                 aria-hidden="true"
               >
-                <li class="planets__item underline-indicator">
+                <li
+                  class="planets__item underline-indicator carousel__btn"
+                  data-index="0"
+                  data-selected
+                >
                   <a href="#">Moon</a>
                 </li>
-                <li class="planets__item underline-indicator" data-selected>
+                <li
+                  class="planets__item underline-indicator carousel__btn"
+                  data-index="1"
+                >
                   <a href="#">Mars</a>
                 </li>
-                <li class="planets__item underline-indicator">
+                <li
+                  class="planets__item underline-indicator carousel__btn"
+                  data-index="2"
+                >
                   <a href="#">Europa</a>
                 </li>
-                <li class="planets__item underline-indicator">
+                <li
+                  class="planets__item underline-indicator carousel__btn"
+                  data-index="3"
+                >
                   <a href="#">Titan</a>
                 </li>
               </ul>

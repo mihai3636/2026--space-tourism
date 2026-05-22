@@ -64,10 +64,9 @@ main {
 }
 
 .container--content {
-  --flow-spacer: var(--sp-9);
+  --flow-spacer: var(--sp-13);
 
   @media (min-width: $bp-desktop) {
-    // padding-inline: min(1vw, var(--sp-12));
     padding-inline: var(--sp-12);
   }
 }
