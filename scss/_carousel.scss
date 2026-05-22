@@ -15,7 +15,7 @@
   z-index: -1;
 
   transition:
-    transform 0.3s,
+    transform 0.3s ease-out,
     opacity 0.3s;
 
   @media (prefers-reduced-motion: reduce) {
