@@ -11,8 +11,6 @@ export function initCarouselBtns() {
 
     if (carouselBtnEl == null) return;
 
-    console.log("Clicked ", carouselBtnEl.dataset.index);
-
     const clickedIndex = Number(carouselBtnEl.dataset.index);
     updateCarouselBtns(clickedIndex);
     updateCarouselItems(clickedIndex);
@@ -26,8 +24,6 @@ function updateCarouselItems(indexClicked) {
     item.dataset.index = currentIndex;
     currentIndex += 1;
   });
-
-  console.log(carouselItems);
 }
 
 function updateCarouselBtns(indexClicked) {
