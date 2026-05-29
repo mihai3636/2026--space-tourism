@@ -87,32 +87,42 @@
   }
 }
 
-.dots {
+.digits {
   gap: var(--sp-5);
+
   @media (min-width: $bp-desktop) {
-    gap: var(--sp-8);
-
-    margin-top: auto;
+    gap: var(--sp-7);
   }
 }
 
-.dot__btn {
+.digit__btn {
   cursor: pointer;
-  width: 10px;
+
+  width: 40px;
   aspect-ratio: 1;
+
   border: none;
-
   border-radius: var(--br-circle);
-}
 
-.dot__item {
-  opacity: 0.3;
+  color: var(--clr-white);
+  background-color: transparent;
 
-  &[data-selected] {
-    opacity: 1;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.3);
+
+  @media (min-width: $bp-tablet) {
+    width: 56px;
   }
 
-  &:hover {
-    opacity: 1;
+  @media (min-width: $bp-desktop) {
+    width: 80px;
+  }
+}
+
+.digit__item {
+  &[data-selected] > .digit__btn,
+  &:hover > .digit__btn {
+    color: var(--clr-primary);
+    background-color: var(--clr-white);
+    box-shadow: none;
   }
 }
