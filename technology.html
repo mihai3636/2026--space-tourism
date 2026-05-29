@@ -71,33 +71,71 @@
         </nav>
       </div>
     </header>
-    <main class="content">
+    <main class="content flow-content flow-content--9">
       <section class="section section--first">
-        <div class="container flow-content flow-content--9 push-inside-desktop">
+        <div class="container push-inside-desktop">
           <h1 class="title tp-5 fg-white"><span>03</span> SPACE LAUNCH 101</h1>
-          <div class="tech container-internal">
+        </div>
+      </section>
+      <section class="section">
+        <div class="container push-inside-desktop">
+          <div class="tech">
             <div class="tech__img center carousel">
-              <img
-                class="img-tech carousel__item"
-                data-index="0"
-                src="./assets/technology/image-launch-vehicle-portrait.jpg"
-                alt="Launch vehicle"
-              />
-              <img
-                class="img-tech carousel__item"
-                data-index="1"
-                src="./assets/technology/image-spaceport-portrait.jpg"
-                alt="Spaceport"
-              />
-              <img
-                class="img-tech carousel__item"
-                data-index="2"
-                src="./assets/technology/image-space-capsule-portrait.jpg"
-                alt="Space Capsule"
-              />
+              <picture class="width-full">
+                <source
+                  media="(min-width: 1000px)"
+                  srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
+                />
+                <source
+                  media="(min-width: 700px)"
+                  srcset="
+                    ./assets/technology/image-launch-vehicle-landscape.jpg
+                  "
+                />
+                <img
+                  class="img-tech carousel__item"
+                  data-index="0"
+                  src="./assets/technology/image-launch-vehicle-portrait.jpg"
+                  alt="Launch vehicle"
+                />
+              </picture>
+
+              <picture class="width-full">
+                <source
+                  media="(min-width: 1000px)"
+                  srcset="./assets/technology/image-spaceport-portrait.jpg"
+                />
+                <source
+                  media="(min-width: 700px)"
+                  srcset="./assets/technology/image-spaceport-landscape.jpg"
+                />
+                <img
+                  class="img-tech carousel__item"
+                  data-index="1"
+                  src="./assets/technology/image-spaceport-portrait.jpg"
+                  alt="Launch vehicle"
+                />
+              </picture>
+
+              <picture class="width-full">
+                <source
+                  media="(min-width: 1000px)"
+                  srcset="./assets/technology/image-space-capsule-portrait.jpg"
+                />
+                <source
+                  media="(min-width: 700px)"
+                  srcset="./assets/technology/image-space-capsule-landscape.jpg"
+                />
+                <img
+                  class="img-tech carousel__item"
+                  data-index="1"
+                  src="./assets/technology/image-space-capsule-portrait.jpg"
+                  alt="Launch vehicle"
+                />
+              </picture>
             </div>
             <div
-              class="tech__info flow-content column column--center column--start-desktop"
+              class="tech__info container-internal flow-content column column--center column--start-desktop"
             >
               <ul
                 id="dotsList"
