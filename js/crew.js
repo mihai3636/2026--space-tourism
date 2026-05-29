@@ -19,7 +19,13 @@ export function initDotsListener(onDotButtonClicked) {
 }
 
 export function render({ name, role, bio }) {
-  nameEl.textContent = name;
-  roleEl.textContent = role;
-  bioEl.textContent = bio;
+  if (nameEl) {
+    nameEl.textContent = name;
+  }
+  if (roleEl) {
+    roleEl.textContent = role;
+  }
+  if (bioEl) {
+    bioEl.textContent = bio;
+  }
 }

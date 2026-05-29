@@ -1,6 +1,11 @@
 import { syncNavState, setupTabTrapping } from "./nav.js";
 import { initCarouselBtns } from "./carousel.js";
-import { loadData, getPlanetInfoByName, getCrewMemberByIndex } from "./data.js";
+import {
+  loadData,
+  getPlanetInfoByName,
+  getCrewMemberByIndex,
+  getTechByIndex,
+} from "./data.js";
 import {
   initPlanetsListener,
   updateDistance,
@@ -11,12 +16,18 @@ import {
 
 import { initDotsListener, render } from "./crew.js";
 
+import {
+  initDotsListener as initTechDots,
+  render as renderTech,
+} from "./tech.js";
+
 syncNavState();
 setupTabTrapping();
-initCarouselBtns();
 
+initCarouselBtns();
 initPlanetsListener(handlePlanetClicked);
 initDotsListener(handleCrewDotClicked);
+initTechDots(handleTechDotClicked);
 
 function handlePlanetClicked(planetName) {
   const planet = getPlanetInfoByName(planetName);
@@ -31,4 +42,9 @@ function handlePlanetClicked(planetName) {
 function handleCrewDotClicked(crewMemberIndex) {
   const crewMember = getCrewMemberByIndex(crewMemberIndex);
   render(crewMember);
+}
+
+function handleTechDotClicked(techIndex) {
+  const techData = getTechByIndex(techIndex);
+  renderTech(techData);
 }

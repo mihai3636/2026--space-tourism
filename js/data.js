@@ -16,3 +16,7 @@ export function getPlanetInfoByName(name) {
 export function getCrewMemberByIndex(crewMemberIndex) {
   return data?.crew[crewMemberIndex];
 }
+
+export function getTechByIndex(techIndex) {
+  return data?.technology[techIndex];
+}
