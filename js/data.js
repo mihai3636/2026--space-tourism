@@ -12,3 +12,7 @@ export async function loadData() {
 export function getPlanetInfoByName(name) {
   return data?.destinations.find((planet) => planet.name === name);
 }
+
+export function getCrewMemberByIndex(crewMemberIndex) {
+  return data?.crew[crewMemberIndex];
+}

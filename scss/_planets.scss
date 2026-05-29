@@ -17,9 +17,6 @@
 }
 
 .destination {
-  max-width: var(--generic-container-max-width);
-  margin-inline: auto;
-
   display: grid;
   row-gap: var(--sp-9);
 
@@ -28,7 +25,6 @@
   }
 
   @media (min-width: $bp-desktop) {
-    max-width: none;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--sp-6);
   }
@@ -36,15 +32,9 @@
 
 .destination__info {
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   --flow-spacer: var(--sp-6);
 
   @media (min-width: $bp-desktop) {
-    align-items: start;
     text-align: start;
   }
 }
@@ -67,11 +57,6 @@
 }
 
 .destination__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // overflow: hidden;
 }
 
 .img-planet {
@@ -85,6 +70,8 @@
 
 .destination__text {
   --flow-spacer: var(--sp-5);
+
+  min-height: 6lh;
 }
 
 .destination__details {
