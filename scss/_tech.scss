@@ -67,8 +67,8 @@
   aspect-ratio: 1;
   object-fit: contain;
 
-  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  // -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  // mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 
   @media (min-width: $bp-desktop) {
     // max-width: 100%;

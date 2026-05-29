@@ -861,8 +861,6 @@ body {
 .img-tech {
   aspect-ratio: 1;
   object-fit: contain;
-  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 @media (min-width: 62.5rem) {
   .img-tech {
