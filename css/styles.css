@@ -133,7 +133,7 @@ body[data-technology] {
 body {
   font-family: var(--ff-main), sans-serif;
   font-size: var(--fs-4);
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-regular);
   line-height: 1.5;
   min-height: 100vh;
   padding-top: var(--sp-6);
@@ -701,6 +701,7 @@ body {
 
 .destination__text {
   --flow-spacer: var(--sp-5);
+  min-height: 12rem;
   min-height: 6lh;
 }
 
@@ -771,10 +772,12 @@ body {
 }
 
 .crew__text {
+  min-height: 12rem;
   min-height: 6lh;
 }
 @media (min-width: 43.75rem) {
   .crew__text {
+    min-height: 8rem;
     min-height: 4lh;
   }
 }
@@ -844,7 +847,6 @@ body {
 @media (min-width: 43.75rem) {
   .tech {
     row-gap: var(--sp-7);
-    padding-bottom: 0;
   }
 }
 @media (min-width: 62.5rem) {
@@ -852,7 +854,6 @@ body {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--sp-7);
     align-items: center;
-    padding-bottom: var(--sp-7);
   }
 }
 
@@ -889,10 +890,12 @@ body {
 }
 
 .tech__text {
+  min-height: 12rem;
   min-height: 6lh;
 }
 @media (min-width: 43.75rem) {
   .tech__text {
+    min-height: 12rem;
     min-height: 4lh;
     --flow-spacer: var(--sp-6);
   }

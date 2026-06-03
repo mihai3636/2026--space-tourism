@@ -21,15 +21,12 @@
 
   @media (min-width: $bp-tablet) {
     row-gap: var(--sp-7);
-    padding-bottom: 0;
   }
 
   @media (min-width: $bp-desktop) {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--sp-7);
     align-items: center;
-
-    padding-bottom: var(--sp-7);
   }
 }
 
@@ -72,9 +69,11 @@
 }
 
 .tech__text {
+  min-height: 12rem;
   min-height: 6lh;
 
   @media (min-width: $bp-tablet) {
+    min-height: 12rem;
     min-height: 4lh;
     --flow-spacer: var(--sp-6);
   }

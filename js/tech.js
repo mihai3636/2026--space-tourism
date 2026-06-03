@@ -6,7 +6,6 @@ export function initDotsListener(onDotButtonClicked) {
   if (dotsList == null) return;
 
   dotsList.addEventListener("click", (ev) => {
-    console.log(ev);
     const target = ev.target;
     const listItemEl = ev.target.closest(".digit__item");
 

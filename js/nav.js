@@ -43,8 +43,8 @@ function closeMenu() {
   if (!isMobile()) return;
 
   navEl.dataset.open = false;
-  btnMenuEl.ariaExpanded = false;
-  navListEl.ariaHidden = true;
+  btnMenuEl.setAttribute("aria-expanded", "false");
+  navListEl.setAttribute("aria-hidden", "true");
   navListEl.setAttribute("inert", "");
   document.body.classList.remove("overflow-hidden");
 }
@@ -53,8 +53,8 @@ function openMenu() {
   if (!isMobile()) return;
 
   navEl.dataset.open = true;
-  btnMenuEl.ariaExpanded = true;
-  navListEl.ariaHidden = false;
+  btnMenuEl.setAttribute("aria-expanded", "true");
+  navListEl.setAttribute("aria-hidden", "false");
   navListEl.removeAttribute("inert", "");
 
   document.body.classList.add("overflow-hidden");

@@ -46,9 +46,11 @@
 }
 
 .crew__text {
+  min-height: 12rem;
   min-height: 6lh;
 
   @media (min-width: $bp-tablet) {
+    min-height: 8rem;
     min-height: 4lh;
   }
 }
