@@ -12,7 +12,7 @@ export function initPlanetsListener(onPlanetButtonClicked) {
 
     if (listItemEl == null) return;
 
-    const planetName = listItemEl.querySelector("a").textContent;
+    const planetName = listItemEl.querySelector("button").textContent.trim();
 
     onPlanetButtonClicked && onPlanetButtonClicked(planetName);
   });

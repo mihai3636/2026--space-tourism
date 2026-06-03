@@ -30,10 +30,12 @@ function updateCarouselBtns(indexClicked) {
   for (let i = 0; i < carouselBtns.length; i++) {
     const btn = carouselBtns[i];
     if (Number(btn.dataset.index) === indexClicked) {
-      carouselBtns[i].setAttribute("data-selected", "");
+      btn.setAttribute("data-selected", "");
+      btn.querySelector("button")?.setAttribute("aria-selected", true);
       continue;
     }
 
     btn.removeAttribute("data-selected");
+    btn.querySelector("button")?.setAttribute("aria-selected", false);
   }
 }

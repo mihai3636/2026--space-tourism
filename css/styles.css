@@ -682,6 +682,12 @@ body {
 .planets__item:hover {
   color: var(--clr-white);
 }
+.planets__item button {
+  cursor: pointer;
+  color: inherit;
+  background: none;
+  border: none;
+}
 
 .img-planet {
   max-width: 50%;

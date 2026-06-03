@@ -54,6 +54,13 @@
   &:hover {
     color: var(--clr-white);
   }
+
+  button {
+    cursor: pointer;
+    color: inherit;
+    background: none;
+    border: none;
+  }
 }
 
 .destination__img {
