@@ -5,7 +5,12 @@
   padding-inline: 0;
 
   @media (min-width: $bp-desktop) {
-    padding-inline: var(--sp-6);
+    // padding-inline: var(--sp-6);
+    padding-inline-start: var(--sp-6);
+  }
+
+  & .push-inside-desktop {
+    padding-inline-end: 0;
   }
 }
 
@@ -21,7 +26,9 @@
 
   @media (min-width: $bp-desktop) {
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--sp-6);
+    column-gap: var(--sp-7);
+    align-items: center;
+
     padding-bottom: var(--sp-7);
   }
 }
@@ -32,6 +39,10 @@
 
   @media (min-width: $bp-tablet) {
     --flow-spacer: var(--sp-5);
+  }
+
+  @media (min-width: $bp-desktop) {
+    // min-height: 2lh;
   }
 }
 
@@ -49,10 +60,14 @@
   @media (min-width: $bp-desktop) {
     text-align: start;
     padding-inline: 0;
-    padding-top: var(--sp-13);
+    padding-top: var(--sp-10);
     padding-bottom: var(--sp-7);
 
-    gap: var(--sp-5);
+    gap: var(--sp-10);
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    --flow-spacer: 0;
   }
 }
 
@@ -61,6 +76,7 @@
 
   @media (min-width: $bp-tablet) {
     min-height: 4lh;
+    --flow-spacer: var(--sp-6);
   }
 }
 
@@ -70,7 +86,8 @@
   }
 
   @media (min-width: $bp-desktop) {
-    // align-items: center;
+    align-items: center;
+    grid-column: 2;
   }
 }
 
@@ -85,10 +102,16 @@
     max-height: 357px;
     object-position: center;
   }
+
+  @media (min-width: $bp-desktop) {
+    max-height: none;
+    object-position: bottom;
+  }
 }
 
 .digits {
   gap: var(--sp-5);
+  justify-content: center;
 
   @media (min-width: $bp-desktop) {
     gap: var(--sp-7);

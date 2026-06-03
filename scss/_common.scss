@@ -87,6 +87,22 @@
   flex-direction: row;
 }
 
+.list--col {
+  flex-direction: column;
+}
+
+.list--col-desktop {
+  @media (min-width: $bp-desktop) {
+    flex-direction: column;
+  }
+}
+
+.list--row-desktop {
+  @media (min-width: $bp-desktop) {
+    flex-direction: row;
+  }
+}
+
 .list--col-mobile {
   flex-direction: column;
 

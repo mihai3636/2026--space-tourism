@@ -63,7 +63,7 @@
   --lh-2: 1.8;
   --bs-inset-right: inset -3px 0px 0px #fff;
   --bs-inset-bottom: inset 0px -3px 0px #fff;
-  --desktop-container-width: 81.25rem;
+  --desktop-container-width: 90rem;
   --br-circle: 50%;
   --cta-btn-size: 9rem;
 }
@@ -237,6 +237,22 @@ body {
 .list {
   display: flex;
   flex-direction: row;
+}
+
+.list--col {
+  flex-direction: column;
+}
+
+@media (min-width: 62.5rem) {
+  .list--col-desktop {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .list--row-desktop {
+    flex-direction: row;
+  }
 }
 
 .list--col-mobile {
@@ -807,8 +823,11 @@ body {
 }
 @media (min-width: 62.5rem) {
   .section:has(.tech) {
-    padding-inline: var(--sp-6);
+    padding-inline-start: var(--sp-6);
   }
+}
+.section:has(.tech) .push-inside-desktop {
+  padding-inline-end: 0;
 }
 
 .tech {
@@ -825,7 +844,8 @@ body {
 @media (min-width: 62.5rem) {
   .tech {
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--sp-6);
+    column-gap: var(--sp-7);
+    align-items: center;
     padding-bottom: var(--sp-7);
   }
 }
@@ -839,7 +859,6 @@ body {
     --flow-spacer: var(--sp-5);
   }
 }
-
 .tech__subtitle {
   text-transform: uppercase;
 }
@@ -853,9 +872,13 @@ body {
   .tech__info {
     text-align: start;
     padding-inline: 0;
-    padding-top: var(--sp-13);
+    padding-top: var(--sp-10);
     padding-bottom: var(--sp-7);
-    gap: var(--sp-5);
+    gap: var(--sp-10);
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    --flow-spacer: 0;
   }
 }
 
@@ -865,6 +888,7 @@ body {
 @media (min-width: 43.75rem) {
   .tech__text {
     min-height: 4lh;
+    --flow-spacer: var(--sp-6);
   }
 }
 
@@ -873,6 +897,13 @@ body {
     align-items: end;
   }
 }
+@media (min-width: 62.5rem) {
+  .tech__img {
+    align-items: center;
+    grid-column: 2;
+  }
+}
+
 .img-tech {
   width: 100%;
   max-height: 258px;
@@ -885,9 +916,16 @@ body {
     object-position: center;
   }
 }
+@media (min-width: 62.5rem) {
+  .img-tech {
+    max-height: none;
+    object-position: bottom;
+  }
+}
 
 .digits {
   gap: var(--sp-5);
+  justify-content: center;
 }
 @media (min-width: 62.5rem) {
   .digits {
