@@ -47,7 +47,6 @@ function closeMenu() {
   navListEl.ariaHidden = true;
   navListEl.setAttribute("inert", "");
   document.body.classList.remove("overflow-hidden");
-  btnMenuEl.focus();
 }
 
 function openMenu() {
@@ -59,8 +58,6 @@ function openMenu() {
   navListEl.removeAttribute("inert", "");
 
   document.body.classList.add("overflow-hidden");
-
-  navListEl.querySelector("a").focus();
 }
 
 export function setupTabTrapping() {

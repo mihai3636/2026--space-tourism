@@ -21,7 +21,6 @@ import {
   render as renderTech,
 } from "./tech.js";
 
-syncNavState();
 setupTabTrapping();
 
 initCarouselBtns();
