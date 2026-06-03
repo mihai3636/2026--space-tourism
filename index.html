@@ -26,7 +26,12 @@
   <body>
     <header class="section section--header">
       <div class="container">
-        <nav id="nav" class="navigation fg-white tp-8" data-open="false">
+        <nav
+          id="nav"
+          class="navigation fg-white tp-8"
+          data-open="false"
+          aria-label="Main"
+        >
           <img src="./assets/shared/logo.svg" alt="" class="navigation__logo" />
           <div class="navigation__decor"></div>
           <ul
@@ -36,7 +41,9 @@
             inert
           >
             <li class="nav__item underline-indicator" data-selected>
-              <a href="#"><span aria-hidden="true">00</span> Home</a>
+              <a href="#" aria-current="page"
+                ><span aria-hidden="true">00</span> Home</a
+              >
             </li>
             <li class="nav__item underline-indicator">
               <a href="/destination.html"
